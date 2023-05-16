@@ -1,3 +1,10 @@
+<template>
+<div class="flex flex-col items-start justify-start h-screen w-screen relative overflow-hidden">
+  <img src="/images/shared/construction-site.jpg" alt="Background" class="absolute inset-0 object-cover w-full h-full">
+  <router-view />
+</div>
+</template>
+
 <script>
 import { defineComponent } from 'vue'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
