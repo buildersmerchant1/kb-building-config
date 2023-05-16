@@ -12,7 +12,6 @@
       <card name="Metal Field Shelter" image="metal-field-shelter" link="/metal-field-shelter" />
       <card name="Steel Building" image="steel-buildings" link="/steel-building" />
     </div>
-    <footer class="fixed inset-x-0 w-full bottom-0 bg-primary text-white flex items-center justify-center text-sm h-[60px]">Buildings Configurator © 2022 Kit Buildings</footer>
   </div>
 </template>
 

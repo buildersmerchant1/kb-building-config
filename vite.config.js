@@ -5,5 +5,5 @@ import vue from '@vitejs/plugin-vue'
 export default defineConfig({
   mode: 'development',
   plugins: [vue()],
-  // base: 'https://exepi.net/buildings/'
+  base: 'https://joyful-mermaid-1c6798.netlify.app/'
 })
