@@ -1,0 +1,128 @@
+@import './animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+
+body {
+  text-rendering: optimizelegibility;
+}
+
+.modal-inputs {
+  @apply text-sm px-2 border-2 w-full border-gray-300 hover:border-primary focus:border-primary ring-0 outline-0 focus:outline-0 hover:outline-0 rounded-md transition h-7 lg:h-10;
+}
+
+input[type="checkbox"]:focus {
+  --tw-ring-color: #02008d;
+}
+
+input[type="checkbox"] {
+  @apply text-primary rounded-sm cursor-pointer;
+}
+
+button[disabled] {
+  @apply cursor-not-allowed bg-slate-300 border-slate-300 text-slate-900 hover:bg-slate-300 hover:border-slate-300 hover:text-slate-900;
+}
+
+.canvas {
+  @apply block w-full h-full;
+}
+
+.canvas:focus,
+.canvas:hover,
+.canvas:active {
+  @apply outline-none border-0;
+}
+
+.quote-button {
+  @apply fixed rounded-md inset-x-0 w-max mx-auto flex items-center justify-center py-2 px-3 lg:py-3 lg:px-5 bg-primary text-white font-bold uppercase cursor-pointer border-2 border-primary hover:bg-white hover:text-primary transition;
+}
+
+.quote-field {
+  @apply absolute h-5 w-5 p-5 rounded-r-md hidden lg:flex justify-center items-center inset-y-0 right-0 z-50 bg-primary text-white;
+}
+
+.modal-content {
+  @apply relative flex flex-col max-h-full mx-4 p-5 rounded-md bg-white text-primary;
+}
+
+.menus-area {
+  @apply w-min sm:w-full flex flex-col sm:flex-row py-3 absolute inset-x-0 z-50 px-4 lg:px-14 bg-white;
+}
+
+/* .menus-area > div,
+.menus-area > button {
+  @apply sm:ml-3 ml-0 mb-2 sm:mb-0 text-xs sm:text-sm;
+} */
+
+.colors-area {
+  @apply overflow-hidden flex flex-col pt-1 pb-3 absolute inset-x-0 z-50 bg-white w-[92%] ml-14 animate-top;
+}
+
+.snapshot-area {
+  @apply overflow-hidden min-h-[100px] flex py-3 absolute inset-x-0 z-50 bg-white w-[89%] ml-14 animate-top;
+}
+
+.height-area {
+  @apply overflow-hidden flex py-3 absolute inset-x-0 z-50 bg-white px-4 lg:pl-14 mr-auto animate-top;
+}
+
+.axis-areas {
+  @apply overflow-hidden flex flex-col py-3 absolute inset-x-0 z-50 bg-white px-4 lg:pl-14 mr-auto animate-top;
+}
+
+.primary-menus {
+  @apply lg:overflow-hidden flex py-3 absolute left-0 z-50 bg-white/50 w-full sm:w-2/3 lg:w-1/3 mr-auto animate-top;
+}
+
+.doors-menus {
+  @apply relative flex flex-col w-full items-start justify-start py-px lg:py-3 pl-4 lg:pl-14 min-h-screen font-semibold text-sm;
+}
+
+.doors-area {
+  @apply relative flex flex-col w-full items-start justify-start py-px lg:py-3 pl-4 lg:pl-14;
+}
+
+.doors-removal {
+  @apply flex lg:flex-col mt-2 lg:mt-52;
+}
+
+.door-warning {
+  @apply mr-1 ml-2 lg:mr-2 lg:ml-0 text-red-500;
+}
+
+.main-door-image {
+  @apply w-auto h-16 lg:h-20 xl:h-24 object-cover;
+}
+
+.personnel-door-image {
+  @apply w-auto h-20 xl:h-44 object-cover;
+}
+
+.door-back-button {
+  @apply ml-0 mt-1 lg:mt-3;
+}
+
+.with-scroll {
+  @apply overflow-y-scroll pb-2;
+
+  height: calc(100vh - 152px);
+}

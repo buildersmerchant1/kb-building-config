@@ -1,0 +1,49 @@
+.animate-top {
+  position: absolute;
+  animation-fill-mode: forwards;
+  animation-duration: 500ms;
+
+  @apply box-content;
+}
+
+@keyframes top-small {
+  from {
+    @apply top-[40px] opacity-0;
+  }
+  
+  to {
+    @apply top-[62px] opacity-100;
+  }
+}
+  
+@keyframes top-large {
+  from {
+    @apply top-[100px] opacity-0;
+  }
+  
+  to {
+    @apply top-[122px] opacity-100;
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes top-small {
+    from {
+      @apply top-[90px] opacity-0;
+    }
+    
+    to {
+      @apply top-[112px] opacity-100;
+    }
+  }
+    
+  @keyframes top-large {
+    from {
+      @apply top-[150px] opacity-0;
+    }
+    
+    to {
+      @apply top-[172px] opacity-100;
+    }
+  } 
+}
