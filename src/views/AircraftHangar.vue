@@ -161,7 +161,7 @@ export default defineComponent({
         'leave-from-class': 'translate-y-0',
       },
       additions: false,
-      emailModal: true,
+      emailModal: false,
       quoteModal: false,
       imageModal: false,
       email: '',
