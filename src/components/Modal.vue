@@ -7,7 +7,7 @@
       <slot :params="params"></slot>
     </div>
     <div v-if="confirmText !== 'default'" class="flex-shrink-0 flex justify-center items-center mr-auto">
-      <primary-button @click="$emit('confirm', close)" :text="confirmText" class="ml-0" />
+      <primary-button @click="sendEmailAndConfirm(close)" :text="confirmText" class="ml-0" />
     </div>
     <div class="absolute top-0 right-0 mt-5 mr-5 text-gray-300 hover:text-primary transition cursor-pointer" @click="close">
       <font-awesome-icon icon="times" fixed-width />
@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import axios from 'axios'; // Import Axios
 import { VueFinalModal } from 'vue-final-modal'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import PrimaryButton from './Button.vue'
@@ -40,6 +41,31 @@ export default {
     PrimaryButton,
     FontAwesomeIcon,
     VueFinalModal,
+  },
+
+  methods: {
+    sendEmailAndConfirm(close) {
+      // Use Axios to send the email
+      axios.post('https://api.example.com/send-email', {
+        to: 'george@buildersmerchant.com',
+        subject: 'Your subject here',
+        message: 'Your message here',
+      })
+      .then(response => {
+        // Email sent successfully, you can handle any response here
+        // For example, you might want to show a success message.
+        console.log('Email sent successfully:', response.data);
+
+        // Now close the modal
+        close();
+      })
+      .catch(error => {
+        // Handle any errors here, e.g., show an error message.
+        console.error('Error sending email:', error);
+
+        // You can choose to close the modal or show an error message to the user.
+      });
+    }
   }
 }
 </script>
