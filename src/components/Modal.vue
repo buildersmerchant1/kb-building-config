@@ -46,7 +46,7 @@ export default {
   methods: {
     sendEmailAndConfirm(close) {
       // Use Axios to send the email
-      axios.post('https://api.example.com/send-email', {
+      axios.post('https://api.mailslurp.com/createInbox?apiKey=a79ccf0aeada35c0e58577491a632a3ded369528e394486ed81a6931dffb980c', {
         to: 'george@buildersmerchant.com',
         subject: 'Your subject here',
         message: 'Your message here',
